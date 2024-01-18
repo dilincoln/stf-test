@@ -7,7 +7,9 @@ namespace STFTest.Data
         public STFTestDBContext(DbContextOptions<STFTestDBContext> options) : base(options) 
         {
         }
-        
+
+        public DbSet<Models.Produto> Produtos { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
