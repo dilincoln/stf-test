@@ -7,8 +7,13 @@ namespace STFTest.Models
         [ForeignKey("Produto")]
         public int IdProduto { get; set; }
 
+        [ForeignKey("Pedido")]
+        public int IdPedido { get; set; }
+
         public int Quantidade { get; set; }
 
         public Produto Produto { get; set; }
+
+        public Pedido Pedido { get; set; }
     } 
 }

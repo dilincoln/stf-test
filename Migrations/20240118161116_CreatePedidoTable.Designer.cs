@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using STFTest.Data;
 
@@ -11,9 +12,10 @@ using STFTest.Data;
 namespace stf_test.Migrations
 {
     [DbContext(typeof(STFTestDBContext))]
-    partial class STFTestDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240118161116_CreatePedidoTable")]
+    partial class CreatePedidoTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
