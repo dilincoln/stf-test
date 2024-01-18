@@ -9,6 +9,13 @@ namespace STFTest
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddDbContext<STFTestDBContext>(options =>
+                    options.UseSqlServer(builder.Configuration.GetConnectionString("STFTestDBContext")
+                        ?? throw new InvalidOperationException(
+                            "Connection String not found"
+                        ))
+                );
+
             // Add services to the container.
 
             builder.Services.AddControllers();
