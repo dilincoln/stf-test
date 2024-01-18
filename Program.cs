@@ -1,4 +1,7 @@
-namespace stf_test
+using Microsoft.EntityFrameworkCore;
+using STFTest.Data;
+
+namespace STFTest
 {
     public class Program
     {

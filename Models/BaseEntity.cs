@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace stf_test.Models;
+namespace STFTest.Models;
 public class BaseEntity
 {
     [Key]
