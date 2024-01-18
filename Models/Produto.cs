@@ -12,5 +12,7 @@ namespace STFTest.Models
         [Required(ErrorMessage = "O preço do produto é obrigatório")]
         [Column(TypeName = "decimal(10,2)")]
         public decimal Valor { get; set; }
+
+        public ICollection<ItemPedido> ItensPedido { get; set; }
     } 
 }

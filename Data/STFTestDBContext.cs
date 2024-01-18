@@ -9,6 +9,7 @@ namespace STFTest.Data
         }
 
         public DbSet<Models.Produto> Produtos { get; set; }
+        public DbSet<Models.ItemPedido> ItensPedido { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
