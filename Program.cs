@@ -32,10 +32,15 @@ namespace STFTest
                 app.UseSwaggerUI();
             }
 
+            // Apply migrations
+            using (var scope = app.Services.CreateScope())
+            {
+                scope.ServiceProvider.GetRequiredService<STFTestDBContext>().Database.Migrate();
+            }
+
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
