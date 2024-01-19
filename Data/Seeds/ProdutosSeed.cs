@@ -16,8 +16,6 @@ namespace STFTest.Data.Seeds
                     Id = i,
                     NomeProduto = $"Produto {i}",
                     Valor = i * 10,
-                    DataCriacao = DateTime.UtcNow,
-                    DataAtualizacao = DateTime.UtcNow
                 });
             }
 
